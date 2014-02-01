@@ -4,7 +4,7 @@ title: Monacoin
 ---
 # Monacoin クライアント（日本語OK）
 
-#### Windows用
+#### Windows
 - [インストーラ版](https://github.com/keystore00/monacoin/releases/download/v0.8.6.1-20140131/monacoin-0.8.6.1-win32-setup.exe "download")
 - [ポータブル版](https://github.com/keystore00/monacoin/releases/download/v0.8.6.1-20140131/monacoin-qt.zip "download")
 - [CLI版](https://github.com/keystore00/monacoin/releases/download/v0.8.6.1-20140131/monacoind.exe "download")
@@ -17,6 +17,7 @@ title: Monacoin
 
 #### Android (alpha)
 - [Android版](https://github.com/keystore00/monacoin-wallet-new/releases/download/v0.07-alpha/wallet-0.07.apk "download")
+    - 注意：PC用のウォレットとの同期はできません
 
 # Other softwares
 - [2ch専ブラ用スクリプト](https://github.com/keystore00/monaext "Go")

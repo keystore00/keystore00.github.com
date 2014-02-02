@@ -31,3 +31,6 @@ title: Monacoin
 
 
 ![Android screenshot](images/screenshot_android.png "Android screenshot")
+
+
+[MD5](./md5.txt "MD5 HASH")

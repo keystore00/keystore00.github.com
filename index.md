@@ -24,7 +24,7 @@ title: Monacoin keystore00
     - 2ch browser script for monacoin
 - [マインクラフト用プラグイン](https://github.com/keystore00/Monacoinish/releases/download/v1.02/Monacoinish-1.02.jar, "Download")
     - Bukkit plugin for monacoin
-[![Monacraft logo](images/monacoinish.png "Monacraft logo")](http://monacoin.sv73.net/monacraft.php "Monacraft")
+    - [![Monacraft logo](images/monacoinish.png "Monacraft logo")](http://monacoin.sv73.net/monacraft.php "Monacraft")
 
 # Screenshots
 ![Windows screenshot](images/screenshot_windows.png "Windows screenshot")
@@ -34,6 +34,6 @@ title: Monacoin keystore00
 
 
 [MD5](./md5.txt "MD5 HASH")  
-[Pools](./pools.html "MD5 HASH")  
-[Links](./links.html "MD5 HASH")
+[Pools](./pools.html "Pools")  
+[Links](./links.html "Links")
 

@@ -35,7 +35,7 @@ title: Links - Monacoin keystore00
 - [Monacoin_logos](https://drive.google.com/folderview?id=0B0ClK0uKFKIhUVdwNV9XbFpjY28&usp=sharing) - Monacoin画像集
 - [仮想通貨 @ wiki](http://www59.atwiki.jp/cryptwiki/)
 
-## Comunities
+## Communities
 - [Monacoin](https://plus.google.com/u/0/communities/116220849735212202796) - Google+
 - [Monacoin Foundation](https://plus.google.com/u/0/communities/114877648491774293558) - Google+
 - [Monacoinを普及させる会](http://com.nicovideo.jp/community/co2253806) - niconico community

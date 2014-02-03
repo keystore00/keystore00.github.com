@@ -1,5 +1,6 @@
 <html>
   <head>
+    <title>Pool list</title>
     <!--Load the AJAX API-->
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -11,7 +12,7 @@ $.support.cors = true;
 google.load('visualization', '1.0', {'packages':['corechart']});
 // Set chart options
 var options = {'title':'Pool Hash Rate Pi Chart',
-	       'width':800,
+	       'width':1000,
 	       'height':700};
 var chart;
 var nethash = 0;
@@ -43,7 +44,7 @@ var txt = ret["responseText"];
 var html = $.parseHTML(txt);
 var ptag = html[5];
 var json = $.parseJSON(ptag.innerHTML);
-		data.addRow([json.pool_name,json.hashrate]);
+		data.addRow([json.pool_name + ": " + json.hashrate/1000 + " Mh/s",json.hashrate]);
 		if (data.getNumberOfRows() >= num_pools) {
 		    var pool_total = 0;
 		    for (var i = 0; i < data.getNumberOfRows(); i++) {
@@ -51,7 +52,7 @@ var json = $.parseJSON(ptag.innerHTML);
 		    }
 		    var others = json.network_hashrate/1000 - pool_total;
 		    if (others > 0) {
-			data.addRow(["Others",others]);
+			data.addRow(["Others " + others/1000 + " Mh/s",others]);
 		    };
 		    data.sort([{column: 1, desc:true}, {column: 0}]);
                     chart.draw(data, options);
@@ -67,16 +68,19 @@ var json = $.parseJSON(ptag.innerHTML);
     chart = new google.visualization.PieChart(document.getElementById('chart_div'));
     chart.draw(data, options);
 }
-function checkObject(_obj){
-  for(var key in _obj){
-    alert(key +" : "+_obj[key]);
-  }
-}
     </script>
   </head>
-
   <body>
     <!--Div that will hold the pie chart-->
     <div id="chart_div"></div>
+    <p>参考程度とお考えください。</p>
+    <p>健全なネットワーク構築のためにプールのハッシュレートを分散させましょう。</p>
+    <ul>
+      <li><a href="http://gikopool.net">gikopool</a></li>
+      <li><a href="http://mona.pool.null-x.me">Kenmopool</a></li>
+      <li><a href="http://mona.2chpool.com">MONA 2ch pool</a></li>
+      <li><a href="http://mona1.monapool.com">Monapool1</a></li>
+      <li><a href="http://vippool.net">VIP Pool</a></li>
+    </ul>
   </body>
 </html>

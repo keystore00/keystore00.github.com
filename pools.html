@@ -55,9 +55,15 @@
       column_data.addRow([json.pool_name,json.workers,json.hashrate/json.workers]);
       if (data.getNumberOfRows() >= num_pools) {
       var pool_total = 0;
+      var pool_total_workers = 0;
       for (var i = 0; i < data.getNumberOfRows(); i++) {
 			  pool_total += data.getValue(i,1);
+			  pool_total_workers += column_data.getValue(i,1);
 			  }
+			  $("#nethash").html(toMH(json.network_hashrate/1000));
+			  $("#total_pool_hash").html(toMH(pool_total));
+			  $("#total_workers").html(pool_total_workers);
+			  $("#average_workers_hash").html(pool_total / pool_total_workers);
 			  var others = json.network_hashrate/1000 - pool_total;
 			  if (others > 0) {
 	data.addRow(["Others " + others/1000 + " Mh/s",others]);
@@ -79,7 +85,10 @@
 	column_chart = new google.visualization.ColumnChart(document.getElementById('column_chart_div'));
 
 	chart.draw(data, options);
-	column_chart.darw(column_data, column_options);
+	column_chart.draw(column_data, column_options);
+	}
+	function toMH(khash) {
+	    return khash/1000 + " MH/s";
 	}
     </script>
   </head>
@@ -87,6 +96,8 @@
     <!--Div that will hold the pie chart-->
     <div id="chart_div"></div>
     <div id="column_chart_div"></div>
+    <p>Network hash rate: <span id="nethash">?</span>, Total pool hash rate<span id="total_pool_hash">?</span></p>
+    <p>Total pool workers:<span id="total_workers">?</span>, Average pool workers hash rate:<span id="average_workers_hash">?</span></p>
     <p>表示されている値は、参考程度とお考えください。</p>
     <p>リロードは控えてください。</p>
     <p>健全なネットワーク構築のためにプールのハッシュレートを分散させましょう。</p>

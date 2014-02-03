@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>Pool list</title>
+    <title>Pool charts</title>
     <!--Load the AJAX API-->
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -12,10 +12,10 @@
       // Set chart options
       var options = {'title':'Pool Hash Rate Pi Chart',
       'width':1000,
-      'height':700};
+      'height':600};
       var column_options = {'title':'Pool Workers Column Chart',
-      'width':1000,
-      'height':700};
+      'width':900,
+      'height':600};
       var chart;
       var column_chart
       var nethash = 0;
@@ -94,10 +94,11 @@
   </head>
   <body>
     <!--Div that will hold the pie chart-->
+    <div align="center">
     <div id="chart_div"></div>
     <div id="column_chart_div"></div>
     <p>Network hash rate: <span id="nethash">?</span>, Total pool hash rate<span id="total_pool_hash">?</span></p>
-    <p>Total pool workers:<span id="total_workers">?</span>, Average pool workers hash rate:<span id="average_workers_hash">?</span></p>
+    <p>Total pool workers:<span id="total_workers">?</span>, Average pool workers hash rate:<span id="average_workers_hash">?</span> KH/s</p>
     <p>表示されている値は、参考程度とお考えください。</p>
     <p>リロードは控えてください。</p>
     <p>健全なネットワーク構築のためにプールのハッシュレートを分散させましょう。</p>
@@ -109,5 +110,6 @@
       <li><a href="http://mona1.monapool.com">Monapool1</a></li>
       <li><a href="http://vippool.net">VIP Pool</a></li>
     </ul>
+    </div>
   </body>
 </html>

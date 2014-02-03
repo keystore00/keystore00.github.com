@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Monacoin
+title: Monacoin keystore00
 ---
 # Monacoin クライアント（日本語OK）
 
@@ -33,4 +33,7 @@ title: Monacoin
 ![Android screenshot](images/screenshot_android.png "Android screenshot")
 
 
-[MD5](./md5.txt "MD5 HASH")
+[MD5](./md5.txt "MD5 HASH")  
+[Pools](./pools.html "MD5 HASH")  
+[Links](./links.html "MD5 HASH")
+

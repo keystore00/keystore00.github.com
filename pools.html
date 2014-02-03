@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>Pool Stats - Monacoin keystore00</title>
+    <title>Pools Stats - Monacoin keystore00</title>
     <!--Load the AJAX API-->
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -10,7 +10,7 @@
       // Load the Visualization API and the piechart package.
       google.load('visualization', '1.0', {'packages':['corechart']});
       // Set chart options
-      var options = {'title':'Pool Hash Rate Pi Chart',
+      var options = {'title':'Pool Hash Rate Pie Chart',
       'width':1000,
       'height':600};
       var column_options = {'title':'Pool Workers Column Chart',
@@ -93,12 +93,13 @@
     </script>
   </head>
   <body>
-    <!--Div that will hold the pie chart-->
     <div align="center">
+    <h1>Monacoin Pools Stats</h1>
+    <!--Div that will hold the pie chart-->
     <div id="chart_div"></div>
     <div id="column_chart_div"></div>
-    <p>Estimated network hash rate: <span id="nethash">?</span>, Total pool hash rate<span id="total_pool_hash">?</span></p>
-    <p>Total pool workers:<span id="total_workers">?</span>, Average pool workers hash rate:<span id="average_workers_hash">?</span> KH/s</p>
+    <p>Estimated network hash rate: <span id="nethash">?</span>, Total pool hash rate: <span id="total_pool_hash">?</span></p>
+    <p>Total pool workers: <span id="total_workers">?</span>, Average pool workers hash rate: <span id="average_workers_hash">?</span> KH/s</p>
     <p>表示されている値は、参考程度とお考えください。</p>
     <p>リロードは控えてください。</p>
     <p>健全なネットワーク構築のためにプールのハッシュレートを分散させましょう。</p>
@@ -110,6 +111,11 @@
       <li><a href="http://mona1.monapool.com">Monapool1</a></li>
       <li><a href="http://vippool.net">VIP Pool</a></li>
     </ul>
+<!--footer -->
+	<p>Author: keystore00 <a  href="https://github.com/keystore00">GitHub</a></p>
+	<p>E-mail: keystore00(at)gmail.com</p>
+	<p>Donate <a href="monacoin:MQY1eFCC2Mxa3sRyME5mNFUWc4wyWxJjtx">MONA</a>:MQY1eFCC2Mxa3sRyME5mNFUWc4wyWxJjtx</p>
+<p><a href="index.html">HOME</a></p>
     </div>
     <script type="text/javascript">
       var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");

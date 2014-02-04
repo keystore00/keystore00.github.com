@@ -60,7 +60,7 @@ function drawChart() {
             $("#cur_diff").html(json.cur_diff);
             $("#next_diff").html(json.next_diff);
             $("#blocksuntildiffchange").html(json.blocksuntildiffchange);
-            $("#blocksuntildiffchangemin").html(json.blocksuntildiffchange * 1.1);
+            $("#blocksuntildiffchangemin").html(json.blocksuntildiffchange * 1.5);
 	    $("#nethash").html(toMH(pool.network_hashrate/1000));
 	    $("#total_pool_hash").html(toMH(pool_total_hash));
 	    $("#total_workers").html(pool_total_workers);

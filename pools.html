@@ -20,6 +20,7 @@ var chart;
 var column_chart
 var nethash = 0;
 var pool_total = 0;
+var watt_pfm = 2.8;
 // Set a callback to run when the Google Visualization API is loaded.
 google.setOnLoadCallback(drawChart);
 
@@ -60,7 +61,8 @@ function drawChart() {
 	    $("#total_pool_hash").html(toMH(pool_total_hash));
 	    $("#total_workers").html(pool_total_workers);
 	    $("#average_workers_hash").html(pool_total_hash / pool_total_workers);
-				$("#time").html(json.time);
+	    $("#time").html(json.time);
+	    $("#net_watt").html(pool.network_hashrate/watt_pfm/1000/1000);
 	    var others = pool.network_hashrate/1000 - pool_total_hash;
 	    others = Math.max(0, others);
 	    data.sort([{column: 1, desc:true}, {column: 0}]);
@@ -95,7 +97,8 @@ function toMH(khash) {
       <div id="column_chart_div"></div>
       <p>Estimated network hash rate: <span id="nethash">?</span>, Total pool hash rate: <span id="total_pool_hash">?</span></p>
       <p>Total pool workers: <span id="total_workers">?</span>, Average pool workers hash rate: <span id="average_workers_hash">?</span> KH/s</p>
-      <p>Time <span id="time">?</span><p>
+      <p>Estimated Electricity Consumption: <span id="net_watt">?</span> MW (R9 280X 700kH/s, 250W, 2.8kH/s/W)</p>
+      <p>Time(UTC) <span id="time">?</span><p>
       <p>表示されている値は、参考程度とお考えください。</p>
       <p>リロードは控えてください。</p>
       <p>健全なネットワーク構築のためにプールのハッシュレートを分散させましょう。</p>

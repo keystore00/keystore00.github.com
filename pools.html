@@ -57,6 +57,10 @@ function drawChart() {
 		pool_total_hash += data.getValue(i,1);
 		pool_total_workers += column_data.getValue(i,1);
 	    }
+            $("#cur_diff").html(json.cur_diff);
+            $("#next_diff").html(json.next_diff);
+            $("#blocksuntildiffchange").html(json.blocksuntildiffchange);
+            $("#blocksuntildiffchangemin").html(json.blocksuntildiffchange * 1.1);
 	    $("#nethash").html(toMH(pool.network_hashrate/1000));
 	    $("#total_pool_hash").html(toMH(pool_total_hash));
 	    $("#total_workers").html(pool_total_workers);
@@ -95,6 +99,8 @@ function toMH(khash) {
       <!--Div that will hold the pie chart-->
       <div id="chart_div"></div>
       <div id="column_chart_div"></div>
+      <p>Current difficulty: <span id="cur_diff">?</span>, Estimated next difficulty: <span id="next_diff">?</span></p>
+      <p>Blocks until diff change: <span id="blocksuntildiffchange">?</span> (~<span id="blocksuntildiffchangemin">?</span>min.)</p>
       <p>Estimated network hash rate: <span id="nethash">?</span>, Total pool hash rate: <span id="total_pool_hash">?</span></p>
       <p>Total pool workers: <span id="total_workers">?</span>, Average pool workers hash rate: <span id="average_workers_hash">?</span> KH/s</p>
       <p>Estimated Electricity Consumption: <span id="net_watt">?</span> MW (R9 280X 700kH/s, 250W, 2.8kH/s/W)</p>
@@ -108,6 +114,7 @@ function toMH(khash) {
 	<li><a href="http://mona.pool.null-x.me">Kenmopool</a></li>
 	<li><a href="http://mona.2chpool.com">MONA 2ch pool</a></li>
 	<li><a href="http://mona1.monapool.com">Monapool1</a></li>
+	<li><a href="http://mona2.monapool.com">Monapool2</a></li>
 	<li><a href="http://vippool.net">VIP Pool</a></li>
       </ul>
       <!--footer -->

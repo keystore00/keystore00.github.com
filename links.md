@@ -27,6 +27,7 @@ title: Links - Monacoin keystore00
 - [Kenmopool](http://mona.pool.null-x.me)
 - [MONA 2ch pool](http://mona.2chpool.com)
 - [Monapool1](http://mona1.monapool.com)
+- [Monapool2](http://mona2.monapool.com)
 - [VIP Pool](http://vippool.net)
 
 ## Misc

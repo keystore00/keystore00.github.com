@@ -7,6 +7,7 @@ title: Monacoin keystore00
 #### Windows
 - [インストーラ版](https://github.com/keystore00/monacoin/releases/download/v0.8.6.2-20140216/monacoin-0.8.6.2-win32-setup.exe "download")
 - [ポータブル版](https://github.com/keystore00/monacoin/releases/download/v0.8.6.2-20140216/monacoin-qt.zip "download")
+    - [bootstrap.dat付き](https://docs.google.com/file/d/0B4M6hqvhxB30cVZHUS1WOVZzZVU/edit?pli=1)
 - [CLI版](https://github.com/keystore00/monacoin/releases/download/v0.8.6.2-20140216/monacoind.exe "download")
 
 #### Linux
@@ -18,6 +19,8 @@ title: Monacoin keystore00
 #### Android (alpha)
 - [Android版](https://github.com/keystore00/monacoin-wallet-new/releases/download/v0.08-alpha/wallet-0.08.apk "download")
     - 注意：PC用のウォレットとの同期はできません
+
+##### [Google Drive](https://drive.google.com/folderview?id=0B4M6hqvhxB30azBmSXFIOXhuSVE&usp=sharing)
 
 # Other softwares
 - [2ch専ブラ用スクリプト](https://github.com/keystore00/monaext "Go")

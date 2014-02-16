@@ -5,18 +5,18 @@ title: Monacoin keystore00
 # Monacoin クライアント（日本語OK）
 
 #### Windows
-- [インストーラ版](https://github.com/keystore00/monacoin/releases/download/v0.8.6.1-20140131/monacoin-0.8.6.1-win32-setup.exe "download")
-- [ポータブル版](https://github.com/keystore00/monacoin/releases/download/v0.8.6.1-20140131/monacoin-qt.zip "download")
-- [CLI版](https://github.com/keystore00/monacoin/releases/download/v0.8.6.1-20140131/monacoind.exe "download")
+- [インストーラ版](https://github.com/keystore00/monacoin/releases/download/v0.8.6.2-20140216/monacoin-0.8.6.2-win32-setup.exe "download")
+- [ポータブル版](https://github.com/keystore00/monacoin/releases/download/v0.8.6.2-20140216/monacoin-qt.zip "download")
+- [CLI版](https://github.com/keystore00/monacoin/releases/download/v0.8.6.2-20140216/monacoind.exe "download")
 
 #### Linux
-- [Linux用一式(32bit/64bit)](https://github.com/keystore00/monacoin/releases/download/v0.8.6.1-20140131/monacoin-linux.zip "download")
+- [Linux用一式(32bit/64bit)](https://github.com/keystore00/monacoin/releases/download/v0.8.6.2-20140216/monacoin-linux.zip "download")
     - monacoin-qt
     - monacoind
     - src
 
 #### Android (alpha)
-- [Android版](https://github.com/keystore00/monacoin-wallet-new/releases/download/v0.07-alpha/wallet-0.07.apk "download")
+- [Android版](https://github.com/keystore00/monacoin-wallet-new/releases/download/v0.08-alpha/wallet-0.08.apk "download")
     - 注意：PC用のウォレットとの同期はできません
 
 # Other softwares

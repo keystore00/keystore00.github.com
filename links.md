@@ -21,8 +21,10 @@ title: Links - Monacoin keystore00
 - [Abe Search](http://abe.monash.pw/) - エクスプローラ
 - [Monacoin Graph](http://abe.monash.pw/graph/) - ハッシュレート・難易度グラフ
 - [MonaCoin Block Crawler ](http://monacoin.org/crawler/block_crawler.php) - エクスプローラ
+- [MonaTrade](http://monat.dip.jp/) - Monacoin専用ショップ
 
 ## Pools
+- [CryptoPoolMining.com](https://www.cryptopoolmining.com/mona)
 - [gikopool](http://gikopool.net)
 - [Kenmopool](http://mona.pool.null-x.me)
 - [MONA 2ch pool](http://mona.2chpool.com)
@@ -32,6 +34,7 @@ title: Links - Monacoin keystore00
 
 ## Misc
 - [START-MONACOIN](http://monacoin-crypto.blogspot.jp/) - はじめてのモナーコイン
+- [Monalink](http://monalink.wkeya.com/) - モナコイン情報サイト
 - [vipでmona乞食ジョギング始めました](http://monacoinhiromare.blog.fc2.com/) - デブのブログ
 - [Monacoin_logos](https://drive.google.com/folderview?id=0B0ClK0uKFKIhUVdwNV9XbFpjY28&usp=sharing) - Monacoin画像集
 - [仮想通貨 @ wiki](http://www59.atwiki.jp/cryptwiki/)

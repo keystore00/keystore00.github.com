@@ -7,7 +7,7 @@ title: Monacoin keystore00
 #### Windows
 - [インストーラ版](https://github.com/keystore00/monacoin/releases/download/v0.8.6.2-20140216/monacoin-0.8.6.2-win32-setup.exe "download")
 - [ポータブル版](https://github.com/keystore00/monacoin/releases/download/v0.8.6.2-20140216/monacoin-qt.zip "download")
-    - [bootstrap.dat付き](https://docs.google.com/file/d/0B4M6hqvhxB30cVZHUS1WOVZzZVU/edit?pli=1)
+    - [bootstrap.dat付き](https://docs.google.com/file/d/0B4M6hqvhxB30cVZHUS1WOVZzZVU/edit?pli=1) - 初めての方用。初回はbootstrap.batを起動してください。
 - [CLI版](https://github.com/keystore00/monacoin/releases/download/v0.8.6.2-20140216/monacoind.exe "download")
 
 #### Linux

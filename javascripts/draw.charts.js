@@ -66,7 +66,7 @@ function drawChart() {
 	    $("#nethash").html(pool.network_hashrate.toFixed(2));
 	    $("#total_pool_hash").html(pool_total_hash.toFixed(2));
 	    $("#total_workers").html(pool_total_workers);
-	    $("#average_workers_hash").html((pool_total_hash/pool_total_workers).toFixed(2));
+	    $("#average_workers_hash").html((pool_total_hash/pool_total_workers*1000).toFixed(2));
 	    $("#time").html(json.time);
 	    $("#net_watt").html((pool.network_hashrate/watt_pfm).toFixed(2));
 	    //draw pie chart

@@ -21,16 +21,12 @@ function arrange() {
 		var info = document.createElement('div');
 		info.className = 'info'
 		info.align = 'center';
-		var atag = document.createElement('a');
-		atag.href = 'monacoin:' + entry.address;
-		atag.appendChild(document.createTextNode('vote'));
 		var h3 = document.createElement('h2');
 		h3.appendChild(document.createTextNode(entry.author));
 		var h5 = document.createElement('h3');
 		h5.appendChild(document.createTextNode('mona : ' + entry.balance));
 		info.appendChild(h3);
 		info.appendChild(h5);
-		info.appendChild(atag);
 		brick.appendChild(img);
 		brick.appendChild(info);
 		document.getElementById('container').appendChild(brick);

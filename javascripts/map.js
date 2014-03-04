@@ -10,7 +10,9 @@ var mapOptions = {
     colorAxis: {colors: ['yellow', 'red']},
     tooltip: { showTitle: false }
 };
-
+var tableOptions = {
+    showRowNumber: true
+};
 function drawChart() {
     // Create the data table header.
     var data = new google.visualization.DataTable();
@@ -23,6 +25,8 @@ function drawChart() {
     table_data.addColumn('string', 'Country');
     table_data.addColumn('string', 'City');
     table_data.addColumn('number', 'Nodes');
+    table_data.addColumn('number', 'Lat');
+    table_data.addColumn('number', 'Long');
 
     $.ajax({
 	url:"http://54.200.189.80/nodemap",
@@ -36,21 +40,28 @@ function drawChart() {
 	    for (var i in json.nodemap) {
 		item = json.nodemap[i];
 		if (item[0] == null | item[1] != 'JP') {
-		    table_data.addRow([item[1],item[0] == null ? 'Unknown' : item[0],item[5]])
+		    table_data.addRow([item[1],item[0] == null ? 'Unknown' : item[0],item[5],item[2],item[3]])
 		    continue;
 		}
-		table_data.addRow([item[1],item[0],item[5]])
+		table_data.addRow([item[1],item[0],item[5],item[2],item[3]])
 		data.addRow([item[2],item[3],item[5],item[0] + " | nodes:" + item[5]]);
 	    }
 	    $("#datetime").html(json.datetime);
 	    $("#total").html(json.total);
-//	    data = new google.visualization.DataTable(); data.addColumn('number', 'Lat'); data.addColumn('number', 'Long'); data.addColumn('number', 'Value'); data.addColumn({type:'string', role:'tooltip'}); data.addColumn('string', 'url'); data.addRows([[35.685,139.7514, 21,"Tokyo | nodes:21", "tokyo"],[34.6864,135.52, 7,"Osaka | nodes:7", "osaka"],])
 	    var view = new google.visualization.DataView(data);
 	    view.setColumns([0,1,2,3]);
 	    var chart = new google.visualization.GeoChart(document.getElementById("chart_div"));
 	    chart.draw(view, mapOptions);
+	    var table_view = new google.visualization.DataView(table_data);
+	    table_view.setColumns([0,1,2]);
 	    var table = new google.visualization.Table(document.getElementById('table_div'));
-            table.draw(table_data, {showRowNumber: true});
+            table.draw(table_view, tableOptions);
+	    var tableSelectHandler = function(e) {
+		var selection = table.getSelection()[0]['row'];
+		window.location = "https://maps.google.com/?z=10&q=" + table_data.getValue(selection,3) + "," + table_data.getValue(selection,4);
+	    }
+	    // Add custom selection handler.
+	    google.visualization.events.addListener(table, 'select', tableSelectHandler);
 	},
 	fail: function() {
 	}

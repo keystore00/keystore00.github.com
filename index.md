@@ -7,7 +7,7 @@ title: Monacoin keystore00
 #### Windows
 - [インストーラ版](https://github.com/keystore00/monacoin/releases/download/v0.8.6.2-20140216/monacoin-0.8.6.2-win32-setup.exe "download")
 - [ポータブル版](https://github.com/keystore00/monacoin/releases/download/v0.8.6.2-20140216/monacoin-qt.zip "download")
-    - [bootstrap.dat付き](https://docs.google.com/file/d/0B4M6hqvhxB30cVZHUS1WOVZzZVU/edit?pli=1) - 初めての方用。初回はbootstrap.batを起動してください。
+    - [bootstrap.dat付き](https://docs.google.com/file/d/0B4M6hqvhxB30cVZHUS1WOVZzZVU/edit?pli=1) - 同期が早く終わるので、初めての方におすすめ。初回はbootstrap.batを起動してください。
 - [CLI版](https://github.com/keystore00/monacoin/releases/download/v0.8.6.2-20140216/monacoind.exe "download")
 
 #### Linux
@@ -22,6 +22,11 @@ title: Monacoin keystore00
 
 ##### [Google Drive](https://drive.google.com/folderview?id=0B4M6hqvhxB30azBmSXFIOXhuSVE&usp=sharing)
 
+#### Info
+- [Node distribution](./monanodes.html "Node distribution")
+- [Pools](./pools.html "Pools")
+- [MD5](./md5.txt "MD5 HASH")
+
 # Other softwares
 - [2ch専ブラ用スクリプト](https://github.com/keystore00/monaext "Go")
     - 2ch browser script for monacoin
@@ -34,9 +39,3 @@ title: Monacoin keystore00
 
 
 ![Android screenshot](images/screenshot_android.png "Android screenshot")
-
-
-[MD5](./md5.txt "MD5 HASH")  
-[Pools](./pools.html "Pools")  
-[Links](./links.html "Links")
-

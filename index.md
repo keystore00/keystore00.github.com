@@ -2,22 +2,22 @@
 layout: default
 title: Monacoin keystore00
 ---
-# Monacoin クライアント（日本語OK）
+# Monacoin クライアント
 
-#### Windows
+#### Windows（注意：新しい仕様に対応していません）
 - [インストーラ版](https://github.com/keystore00/monacoin/releases/download/v0.8.6.2-20140216/monacoin-0.8.6.2-win32-setup.exe "download")
 - [ポータブル版](https://github.com/keystore00/monacoin/releases/download/v0.8.6.2-20140216/monacoin-qt.zip "download")
     - [bootstrap.dat付き](https://docs.google.com/file/d/0B4M6hqvhxB30cVZHUS1WOVZzZVU/edit?pli=1) - 同期が早く終わるので、初めての方におすすめ。初回はbootstrap.batを起動してください。
 - [CLI版](https://github.com/keystore00/monacoin/releases/download/v0.8.6.2-20140216/monacoind.exe "download")
 
-#### Linux
+#### Linux（注意：新しい仕様に対応していません）
 - [Linux用一式(32bit/64bit)](https://github.com/keystore00/monacoin/releases/download/v0.8.6.2-20140216/monacoin-linux.zip "download")
     - monacoin-qt
     - monacoind
     - src
 
 #### Android (alpha)
-- [Android版](https://github.com/keystore00/monacoin-wallet-new/releases/download/v0.09-alpha/wallet-0.09.apk "download")
+- [Android版](https://github.com/keystore00/monacoin-wallet-new/releases/download/v0.10-alpha/wallet-0.10.apk "download")
     - 注意：PC用のウォレットとの同期はできません
 
 ##### [Google Drive](https://drive.google.com/folderview?id=0B4M6hqvhxB30azBmSXFIOXhuSVE&usp=sharing)

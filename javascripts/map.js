@@ -54,7 +54,13 @@ function drawChart() {
             table.draw(table_view, tableOptions);
 	    var tableSelectHandler = function(e) {
 		var selection = table.getSelection()[0]['row'];
-		window.location = "https://maps.google.com/?z=10&q=" + table_data.getValue(selection,4) + "," + table_data.getValue(selection,5);
+		if (world) {
+		    window.location = "https://maps.google.com/?z=10&q=" + table_data.getValue(selection,4) + "," + table_data.getValue(selection,5);
+		} else {
+		    var jptable_view = new google.visualization.DataView(table_data);
+		    jptable_view.setRows(table_data.getFilteredRows([{column: 0, value: 'JP'}]));
+		    window.location = "https://maps.google.com/?z=10&q=" + jptable_view.getValue(selection,4) + "," + jptable_view.getValue(selection,5);
+		}
 	    }
 	    // Add custom selection handler.
 	    google.visualization.events.addListener(table, 'select', tableSelectHandler);

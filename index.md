@@ -29,7 +29,7 @@ title: Monacoin keystore00
 # Other softwares
 - [2ch専ブラ用スクリプト](https://github.com/keystore00/monaext "Go")
     - 2ch browser script for monacoin
-- [マインクラフト用プラグイン](https://github.com/keystore00/Monacoinish/releases/download/v1.02/Monacoinish-1.02.jar, "Download")
+- [マインクラフト用プラグイン](https://github.com/keystore00/Monacoinish/releases/download/v1.1/Monacoinish-1.1.jar "Download")
     - Bukkit plugin for monacoin
     - [![Monacraft logo](images/monacoinish.png "Monacraft logo")](http://monacoin.sv73.net/monacraft.php "Monacraft")
 

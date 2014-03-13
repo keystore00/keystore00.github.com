@@ -1,5 +1,5 @@
-f2b5a0bc6ad7bd31decfba56d499c41d  monacoin-0.8.6.2-win32-setup.exe
-c498ea986346a034e4e53d3c1cc48b7b  monacoind.exe
-795d32eb6b7c7ce51cb2a94efb2f08ee  monacoin-linux.zip
-36a6a92568ce8338c90bce91dee8dbb2  monacoin-qt.zip
-c6abf32edaf37e5b0005efb0c21f767a  wallet-0.08.apk
+5aad07ce12fc22f4c76970dcfa0664b0 monacoin-0.8.6.2-kgw-linux.zip
+89ffb7f72a68552dcc3d56fd5713fe0d monacoin-0.8.6.2-kgw-win32-setup.exe
+b10ce7fe5182f9c26fa1b22660edbf6c monacoin-qt-kgw.zip
+c80dbff27fe180bae35a26602140b58b monacoind.exe
+4d9b09d48c5e423a6d328c386f3c1395 wallet-0.10.apk

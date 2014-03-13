@@ -2,16 +2,15 @@
 layout: default
 title: Monacoin keystore00
 ---
-# Monacoin クライアント
+# Monacoin クライアント（非公式）
 
-#### Windows（注意：新しい仕様に対応していません）
-- [インストーラ版](https://github.com/keystore00/monacoin/releases/download/v0.8.6.2-20140216/monacoin-0.8.6.2-win32-setup.exe "download")
-- [ポータブル版](https://github.com/keystore00/monacoin/releases/download/v0.8.6.2-20140216/monacoin-qt.zip "download")
-    - [bootstrap.dat付き](https://docs.google.com/file/d/0B4M6hqvhxB30cVZHUS1WOVZzZVU/edit?pli=1) - 同期が早く終わるので、初めての方におすすめ。初回はbootstrap.batを起動してください。
-- [CLI版](https://github.com/keystore00/monacoin/releases/download/v0.8.6.2-20140216/monacoind.exe "download")
+#### Windows
+- [インストーラ版](https://github.com/keystore00/monacoin/releases/download/v0.8.6.2-KGW/monacoin-0.8.6.2-kgw-win32-setup.exe "download")
+- [ポータブル版](https://github.com/keystore00/monacoin/releases/download/v0.8.6.2-KGW/monacoin-qt-kgw.zip "download")
+- [CLI版](https://github.com/keystore00/monacoin/releases/download/v0.8.6.2-KGW/monacoind.exe "download")
 
-#### Linux（注意：新しい仕様に対応していません）
-- [Linux用一式(32bit/64bit)](https://github.com/keystore00/monacoin/releases/download/v0.8.6.2-20140216/monacoin-linux.zip "download")
+#### Linux
+- [Linux用一式(32bit/64bit)](https://github.com/keystore00/monacoin/releases/download/v0.8.6.2-KGW/monacoin-0.8.6.2-kgw-linux.zip "download")
     - monacoin-qt
     - monacoind
     - src

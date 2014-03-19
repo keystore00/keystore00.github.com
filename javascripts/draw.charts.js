@@ -60,8 +60,6 @@ function drawChart() {
 		pool_total_workers += pool.workers
 	    }
 	    $("#cur_diff").html(json.cur_diff.toFixed(2));
-	    $("#next_diff").html(json.next_diff.toFixed(2));
-	    $("#blocksuntildiffchange").html(json.blocksuntildiffchange);
 	    $("#blocksuntildiffchangemin").html(json.blocksuntildiffchange * 1.5 / 60);
 	    $("#nethash").html(pool.network_hashrate.toFixed(2));
 	    $("#total_pool_hash").html(pool_total_hash.toFixed(2));

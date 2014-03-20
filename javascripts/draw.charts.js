@@ -2,10 +2,10 @@ $.support.cors = true;
 // Load the Visualization API and the piechart package.
 google.load('visualization', '1.0', {'packages':['corechart']});
 // Set chart options
-var options = {'title':'Pool Hash Rate Distribution Pie Chart',
+var options = {'title':'Pool Hash Rate Distribution',
 	       'width':1000,
 	       'height':600};
-var column_options = {'title':'Pool Workers Column Chart',
+var column_options = {'title':'Pool Workers',
 		      'width':900,
 		      'height':600};
 var chart;
@@ -59,6 +59,13 @@ function drawChart() {
 		pool_total_hash += pool.hashrate;
 		pool_total_workers += pool.workers
 	    }
+	    var no_res_pools = json.no_response;
+	    var no_res_list = ""
+	    for (var i in no_res_pools) {
+		var no_res = no_res_pools[i];
+		no_res_list = no_res_list + no_res + ",";
+	    }
+	    no_res_list = no_res_list + "?";
 	    $("#cur_diff").html(json.cur_diff.toFixed(2));
 	    $("#blocksuntildiffchangemin").html(json.blocksuntildiffchange * 1.5 / 60);
 	    $("#nethash").html(pool.network_hashrate.toFixed(2));
@@ -71,7 +78,7 @@ function drawChart() {
 	    var others = pool.network_hashrate - pool_total_hash;
 	    others = Math.max(0, others);
 	    data.sort([{column: 2, desc:true}, {column: 0}]);
-	    data.addRow(["Others " + others + " Mh/s","hoge",others]);
+	    data.addRow(["Others (" + no_res_list + ")","hoge",others]);
 	    var view = new google.visualization.DataView(data);
 	    view.setColumns([0, 2]);
 	    chart.draw(view, options);

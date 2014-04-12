@@ -48,7 +48,12 @@ function drawChart() {
 		pool.hashrate /= 1000; //to MH
 		pool.network_hashrate /= 1000 * 1000; //to MH
 		data.addRow([pool.pool_name, pool_address, pool.hashrate]);
-		column_data.addRow([pool.pool_name, pool_address, pool.workers,pool.hashrate/pool.workers*1000]);
+		if (pool.workers != 0) {
+		    hashrate_per_worker = pool.hashrate/pool.workers*1000;
+		} else {
+		    hashrate_per_worker = 0;
+		}
+		column_data.addRow([pool.pool_name, pool_address, pool.workers,hashrate_per_worker]);
 		var atag = document.createElement('a');
 		atag.href = pool_address;
 		atag.target = '_blank';

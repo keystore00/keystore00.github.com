@@ -1,0 +1,49 @@
+<html>
+  <title>Play around with Snap.svg</title>
+  <head>    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="js/jquery.js"></script>
+    <script src="js/snap.svg.js"></script>
+  </head>
+  <body>
+    <script>
+     var margin = 50;
+     var ww = $(window).width() - margin;
+     var wh = $(window).height() - margin;
+     var wcenter = [ww/2, wh/2];
+     var s = Snap(ww, wh);
+     var mc_center;
+     var bbox;
+
+     function endless(el, init, animation, duration) {
+       el.transform(init);
+       el.animate(animation, duration, endless.bind(null, el, init, animation, duration));
+     }
+     function nextFrame ( el, frameArray,  whichFrame ) {
+       if( whichFrame >= frameArray.length ) { whichFrame = 0 }
+       el.animate( frameArray[ whichFrame ].animation, frameArray[ whichFrame ].dur, nextFrame.bind( null, el, frameArray, whichFrame + 1 ) );
+     }
+     function continuous (el, frames) {
+       nextFrame(el, frames, 0);
+     }
+     
+     Snap.load("monacoin.svg", function (f) {
+       var monacoin = s.group(f.selectAll("g"));
+       bbox = monacoin.getBBox();
+       mc_center = [bbox.width / 2, bbox.height / 2];
+       var init = 't' + [ww/2 - bbox.width/2, wh/2 - bbox.height/2];
+       var centerFrames = [
+	 {animation:{ transform: init + 's0,1'}, dur:1000},
+	 {animation:{ transform: init + 's1,1'}, dur:1000}
+       ];
+       monacoin.transform(init);
+       continuous(monacoin, centerFrames);
+
+       var clone = monacoin.clone();
+       init = 't' + [ww/2 - bbox.width/2 - 100, wh/2 - bbox.height/2];
+       endless(clone, init, { transform: init + 'R360,' + wcenter + 'r-720,' + mc_center}, 1000);
+     });
+    </script>
+  </body>
+</html>

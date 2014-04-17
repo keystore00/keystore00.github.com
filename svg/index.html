@@ -16,33 +16,29 @@
      var mc_center;
      var bbox;
 
-     function endless(el, init, animation, duration) {
-       el.transform(init);
-       el.animate(animation, duration, endless.bind(null, el, init, animation, duration));
-     }
-     function nextFrame ( el, frameArray,  whichFrame ) {
-       if( whichFrame >= frameArray.length ) { whichFrame = 0 }
-       el.animate( frameArray[ whichFrame ].animation, frameArray[ whichFrame ].dur, nextFrame.bind( null, el, frameArray, whichFrame + 1 ) );
-     }
-     function continuous (el, frames) {
-       nextFrame(el, frames, 0);
-     }
-     
      Snap.load("monacoin.svg", function (f) {
-       var monacoin = s.group(f.selectAll("g"));
+       var monacoin = f.select("g");
+       s.append(monacoin);
        bbox = monacoin.getBBox();
        mc_center = [bbox.width / 2, bbox.height / 2];
        var init = 't' + [ww/2 - bbox.width/2, wh/2 - bbox.height/2];
-       var centerFrames = [
-	 {animation:{ transform: init + 's0,1'}, dur:1000},
-	 {animation:{ transform: init + 's1,1'}, dur:1000}
-       ];
        monacoin.transform(init);
-       continuous(monacoin, centerFrames);
 
-       var clone = monacoin.clone();
-       init = 't' + [ww/2 - bbox.width/2 - 100, wh/2 - bbox.height/2];
-       endless(clone, init, { transform: init + 'R360,' + wcenter + 'r-720,' + mc_center}, 1000);
+       var origTransform = monacoin.select("#face_layer").transform().local;
+       var animDuration = 1000;
+       monacoin.hover(
+	 function () {
+	   monacoin.select("#face_layer").animate({ transform: origTransform + 'S' + 5},animDuration, mina.elastic);
+	   monacoin.select("#mona_face_contour").animate({"fill": "#000000"},animDuration/2);
+	   monacoin.select("#mona_face_mouth_inside").animate({"fill": "#ff0000"},animDuration/2)
+	 },
+	 function () {
+	   monacoin.select("#face_layer").animate({ transform: origTransform + 'S' + 1},animDuration, mina.elastic);
+	   monacoin.select("#mona_face_contour").animate({"fill": "#ffffff"},animDuration/2);
+	   monacoin.select("#mona_face_mouth_inside").animate({"fill": "#ffffff"},animDuration/2)
+	 }
+       );
+       
      });
     </script>
   </body>

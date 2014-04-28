@@ -5,8 +5,8 @@ title: Monacoin keystore00
 # Monacoin クライアント（非公式）
 
 #### Windows
-- [インストーラ版](https://github.com/keystore00/monacoin/releases/download/v0.8.6.2-KGW/monacoin-0.8.6.2-kgw-win32-setup.exe "download")
-- [ポータブル版](https://github.com/keystore00/monacoin/releases/download/v0.8.6.2-KGW/monacoin-qt-kgw.zip "download")
+- [インストーラ版](https://github.com/keystore00/monacoin/releases/download/v0.8.6.2-custom-fix/monacoin-0.8.6.2-win32-setup.exe "download")
+- [ポータブル版](https://github.com/keystore00/monacoin/releases/download/v0.8.6.2-custom-fix/monacoin-qt.zip "download")
 - [CLI版](https://github.com/keystore00/monacoin/releases/download/v0.8.6.2-KGW/monacoind.exe "download")
 
 #### Linux

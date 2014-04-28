@@ -22,6 +22,7 @@ title: Monacoin keystore00
 ##### [Google Drive](https://drive.google.com/folderview?id=0B4M6hqvhxB30azBmSXFIOXhuSVE&usp=sharing)
 
 #### Info
+- [Customize](./custom.html "Customize")
 - [Pools](./pools.html "Pools")
 - [MD5](./md5.txt "MD5 HASH")
 

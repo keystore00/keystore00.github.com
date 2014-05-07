@@ -1,7 +1,7 @@
 function arrange() {
     var container = document.getElementById('container')
     $.ajax({
-	url:"http://54.200.116.71/entries",
+	url:"http://givememona.tk/entries",
 	type:"GET",
 	//async:false,
 	success: function(ret){

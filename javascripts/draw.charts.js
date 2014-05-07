@@ -32,7 +32,7 @@ function drawChart() {
     column_data.addColumn('number', 'Workers');
     column_data.addColumn('number', 'Kh/s/worker');
     $.ajax({
-	url:"http://54.200.116.71/",
+	url:"http://givememona.tk/json/pools.json",
 	type:"GET",
 	success: function(ret){
 	    var txt = ret["responseText"];

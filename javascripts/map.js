@@ -24,7 +24,7 @@ function drawChart() {
 
     var jpnodes = 0;
     $.ajax({
-	url:"http://54.200.189.80/nodemap",
+	url:"http://givememona.tk/json/nodemap",
 	type:"GET",
 	success: function(ret){
 	    var txt = ret["responseText"];

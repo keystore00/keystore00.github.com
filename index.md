@@ -9,7 +9,7 @@ title: Monacoin keystore00
 - [ポータブル版](https://github.com/keystore00/monacoin/releases/download/v0.8.7.0/monacoin-qt-v0.8.7.0.zip "download")
 - [CLI版](https://github.com/keystore00/monacoin/releases/download/v0.8.7.0/monacoind.exe "download")
 
-#### Android (alpha)
+#### Android
 - [Android版(v0.13)](https://github.com/keystore00/monacoin-wallet-new/releases/download/v0.13/wallet-0.13.apk "download")
     - 注意：PC用のウォレットとの同期はできません
 

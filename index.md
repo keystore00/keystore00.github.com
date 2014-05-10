@@ -10,7 +10,7 @@ title: Monacoin keystore00
 - [CLI版](https://github.com/keystore00/monacoin/releases/download/v0.8.7.0/monacoind.exe "download")
 
 #### Android (alpha)
-- [Android版](https://github.com/keystore00/monacoin-wallet-new/releases/download/v0.12/wallet-0.12.apk "download")
+- [Android版(v0.13)](https://github.com/keystore00/monacoin-wallet-new/releases/download/v0.13/wallet-0.13.apk "download")
     - 注意：PC用のウォレットとの同期はできません
 
 ##### [Google Drive](https://drive.google.com/folderview?id=0B4M6hqvhxB30azBmSXFIOXhuSVE&usp=sharing)

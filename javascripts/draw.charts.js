@@ -7,7 +7,17 @@ var options = {'title':'Pool Hash Rate Distribution',
 	       'height':600};
 var column_options = {'title':'Pool Workers',
 		      'width':900,
-		      'height':600};
+		      'height':600,
+		      'legend':'top',
+		      'vAxes':{
+			  0:{'title':'workers'},
+			  1:{'title':'Kh/s/worker'}
+		      },
+		      'series':{
+			  0:{'targetAxisIndex':0},
+			  1:{'targetAxisIndex':1},
+		      }
+		     };
 var chart;
 var column_chart
 var nethash = 0;

@@ -3,8 +3,13 @@ $.support.cors = true;
 google.load('visualization', '1.0', {'packages':['corechart']});
 // Set chart options
 var options = {'title':'Pool Hash Rate Distribution',
-	       'width':1000,
-	       'height':600};
+	       'width':600,
+	       'height':500,
+	       'chartArea': {'width': '100%', 'height': '80%'}};
+var pi_options = {'title':'Block Finder Distribution (Last 480 blocks)',
+	       'width':600,
+	       'height':500,
+	       'chartArea': {'width': '100%', 'height': '80%'}};
 var column_options = {'title':'Pool Workers',
 		      'width':900,
 		      'height':600,
@@ -41,6 +46,9 @@ function drawChart() {
     column_data.addColumn('string', 'Address');
     column_data.addColumn('number', 'Workers');
     column_data.addColumn('number', 'Kh/s/worker');
+    var pi_data = new google.visualization.DataTable();
+    pi_data.addColumn('string', 'Address');
+    pi_data.addColumn('number', 'count');
     $.ajax({
 	url:"http://givememona.tk/json/pools.json",
 	type:"GET",
@@ -102,7 +110,15 @@ function drawChart() {
 	    var column_view = new google.visualization.DataView(column_data);
 	    column_view.setColumns([0,2,3]);
 	    column_chart.draw(column_view, column_options);
-
+	    //finder chart
+	    finders = json.finder_address
+	    for (var f in finders) {
+		pi_data.addRow([f, finders[f]]);
+	    }
+	    pi_data.sort([{column: 1, desc:true}, {column: 0}]);
+	    var pi_view = new google.visualization.DataView(pi_data);
+	    pi_view.setColumns([0,1]);
+	    pi_chart.draw(pi_view, pi_options);
 	},
 	fail: function() {
 	}
@@ -111,6 +127,7 @@ function drawChart() {
 
     // Instantiate and draw our chart, passing in some options.
     chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+    pi_chart = new google.visualization.PieChart(document.getElementById('finder_chart_div'));
     column_chart = new google.visualization.ColumnChart(document.getElementById('column_chart_div'));
 
     var selectHandler = function(e) {

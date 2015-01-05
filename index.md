@@ -17,7 +17,6 @@ title: Monacoin keystore00
 
 #### Info
 - [Customize](./custom.html "Customize")
-- [Pools](./pools.html "Pools")
 - [MD5](./md5.txt "MD5 HASH")
 
 # Other softwares
